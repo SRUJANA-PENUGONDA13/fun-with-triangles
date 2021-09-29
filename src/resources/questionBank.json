@@ -1,0 +1,68 @@
+[
+  {
+    "name": "Question1",
+    "content": "What is the third angle for the triangle where angle1 = 45° and angle2 = 45°?",
+    "options": ["45°", "90°", "60°"],
+    "output": ""
+  },
+  {
+    "name": "Question2",
+    "content": "What is the third angle for the triangle where angle1 = 45° and angle2 = 45°?",
+    "options": ["obtuse", "acute", "right angled"],
+    "output": ""
+  },
+  {
+    "name": "Question3",
+    "content": "A triangle can have",
+    "options": ["one right angle", "two right angles", "None of these"],
+    "output": ""
+  },
+  {
+    "name": "Question4",
+    "content": "Which of the following can form a right angled triangle?",
+    "options": ["14, 15, 26", "12, 16, 20", "None of these"],
+    "output": ""
+  },
+  {
+    "name": "Question5",
+    "content": "Which of the following triangles are always similar?",
+    "options": ["Equilateral triangle", "Isosceles triangle", "None of these"],
+    "output": ""
+  },
+  {
+    "name": "Question6",
+    "content": "A triangle can have",
+    "options": ["one right angle", "two right angles", "None of these"],
+    "output": ""
+  },
+  {
+    "name": "Question7",
+    "content": "A triangle can haveIf one angle of a triangle is obtuse, then which one of the following is the possible measure of remaining angles?",
+    "options": ["100° ", "85°", "None of these"],
+    "output": ""
+  },
+  {
+    "name": "Question8",
+    "content": "If the largest angle in a triangle is 70°, what is the least possible value of the smallest angle of the triangle?",
+    "options": ["30°", "40°", "None of these"],
+    "output": ""
+  },
+  {
+    "name": "Question9",
+    "content": "The perimeter of scalene triangle with sides a, b, c is",
+    "options": ["a + b + c", "2a", "None of these"],
+    "output": ""
+  },
+  {
+    "name": "Question10",
+    "content": "A scalene triangle has ___ lines of symmetry",
+    "options": ["two", "no", "15"],
+    "output": ""
+  },
+  {
+    "name": "Question11",
+    "content": "There is a right triangle PQR where: angle Q = 90°; angle P = angle R. What is the measure of angles P and R?",
+    "options": ["85°", "65°", "45°"],
+    "output": ""
+  }
+]
