@@ -24,6 +24,7 @@ const Hypotenuse = () => {
             type="number"
             class="input-text side-input"
             name="base"
+            min="0"
             onChange={(event) => setBase(event.target.value)}
           ></input>
         </label>
@@ -33,6 +34,7 @@ const Hypotenuse = () => {
             type="number"
             class="input-text side-input"
             name="height"
+            min="0"
             onChange={(event) => setHeight(event.target.value)}
           ></input>
         </label>

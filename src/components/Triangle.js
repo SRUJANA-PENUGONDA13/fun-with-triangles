@@ -28,6 +28,7 @@ const Triangle = () => {
         </label>
         <input
           type="number"
+          min="0"
           className="input-text angle-input"
           name="angle1"
           onChange={(event) => setAngle1(event.target.value)}
@@ -36,6 +37,7 @@ const Triangle = () => {
           <p>Angle2</p>
         </label>
         <input
+          min="0"
           type="number"
           className="input-text angle-input"
           name="angle1"
@@ -47,6 +49,7 @@ const Triangle = () => {
         <input
           type="number"
           className="input-text angle-input"
+          min="0"
           name="angle3"
           onChange={(event) => setAngle3(event.target.value)}
         ></input>

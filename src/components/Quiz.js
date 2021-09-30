@@ -5,7 +5,7 @@ import Question from "./Question";
 
 const Quiz = () => {
   let questionBank = require("../resources/questionBank.json");
-  let [output, setOutput] = useState("");
+  let [output, setOutput] = useState(" ");
   let [actualAnswers, setActualAnswers] = useState([
     "90°",
     "right angled",
@@ -24,10 +24,9 @@ const Quiz = () => {
   const calculateScore = (event) => {
     event.preventDefault();
     var count = 0;
+    setOutput("");
     userResponse.map((question, index) => {
-      if (
-        question.output.toString.strip == actualAnswers[index].toString.strip
-      ) {
+      if (question.output.localeCompare(actualAnswers[index]) == 0) {
         count = count + 1;
       }
     });
