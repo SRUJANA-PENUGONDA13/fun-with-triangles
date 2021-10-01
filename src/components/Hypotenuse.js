@@ -13,7 +13,7 @@ const Hypotenuse = () => {
       setOutput("Please provide valid inputs");
     } else {
       var hypotenuse = Math.sqrt(Math.pow(b, 2) + Math.pow(h, 2));
-      setOutput("The length of hypotenuse is " + hypotenuse);
+      setOutput("The length of hypotenuse is " + hypotenuse.toFixed(2));
     }
   };
   return (

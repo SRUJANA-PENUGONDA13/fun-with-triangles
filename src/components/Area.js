@@ -25,7 +25,7 @@ const Area = () => {
     } else {
       let s = (a + b + c) / 2;
       let area = Math.sqrt(s * (s - a) * (s - b) * (s - c));
-      setOutput("Area of a triangle is: " + area + " units");
+      setOutput("Area of a triangle is: " + area.toFixed(2) + " units");
     }
   };
   return (
