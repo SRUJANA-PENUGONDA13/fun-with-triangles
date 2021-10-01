@@ -3,18 +3,31 @@ import Header from "./Header";
 import Footer from "./Footer";
 
 const Triangle = () => {
-  var [angle1, setAngle1] = useState(0);
-  var [angle2, setAngle2] = useState(0);
-  var [angle3, setAngle3] = useState(0);
+  var [angle1, setAngle1] = useState("");
+  var [angle2, setAngle2] = useState("");
+  var [angle3, setAngle3] = useState("");
   var [output, setOutput] = useState("");
 
   const isTriangle = () => {
-    const sum = parseInt(angle1) + parseInt(angle2) + parseInt(angle3);
-
-    if (sum === 180) {
-      setOutput("Yay, the angles form a triangle!");
+    var tangle1 = parseInt(angle1);
+    var tangle2 = parseInt(angle2);
+    var tangle3 = parseInt(angle3);
+    if (
+      Number.isNaN(tangle1) ||
+      Number.isNaN(tangle2) ||
+      Number.isNaN(tangle3) ||
+      tangle1 < 0 ||
+      tangle2 < 0 ||
+      tangle3 < 0
+    ) {
+      setOutput("Please provide valid inputs");
     } else {
-      setOutput("Oh Oh! The angle doesn't form a triangle");
+      var sum = tangle1 + tangle2 + tangle3;
+      if (sum === 180) {
+        setOutput("Yay, the angles form a triangle!");
+      } else {
+        setOutput("Oh Oh! The angles doesn't form a triangle");
+      }
     }
   };
 

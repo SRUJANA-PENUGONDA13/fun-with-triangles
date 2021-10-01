@@ -2,16 +2,19 @@ import React, { useState } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 const Hypotenuse = () => {
-  var [base, setBase] = useState(0);
-  var [height, setHeight] = useState(0);
+  var [base, setBase] = useState("");
+  var [height, setHeight] = useState("");
   var [output, setOutput] = useState("");
 
   const calculateHypotenuse = () => {
     let b = parseInt(base);
     let h = parseInt(height);
-
-    var hypotenuse = Math.sqrt(Math.pow(b, 2) + Math.pow(h, 2));
-    setOutput("The length of hypotenuse is " + hypotenuse);
+    if (b < 0 || h < 0 || Number.isNaN(b) || Number.isNaN(h)) {
+      setOutput("Please provide valid inputs");
+    } else {
+      var hypotenuse = Math.sqrt(Math.pow(b, 2) + Math.pow(h, 2));
+      setOutput("The length of hypotenuse is " + hypotenuse);
+    }
   };
   return (
     <React.Fragment>

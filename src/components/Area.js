@@ -3,9 +3,9 @@ import Header from "./Header";
 import Footer from "./Footer";
 
 const Area = () => {
-  var [side1, setSide1] = useState(0);
-  var [side2, setSide2] = useState(0);
-  var [side3, setSide3] = useState(0);
+  var [side1, setSide1] = useState("");
+  var [side2, setSide2] = useState("");
+  var [side3, setSide3] = useState("");
   var [output, setOutput] = useState("");
 
   const calculateArea = () => {
@@ -13,7 +13,14 @@ const Area = () => {
     let b = parseInt(side2);
     let c = parseInt(side3);
 
-    if (a < 0 || b < 0 || c < 0) {
+    if (
+      a < 0 ||
+      b < 0 ||
+      c < 0 ||
+      Number.isNaN(a) ||
+      Number.isNaN(b) ||
+      Number.isNaN(c)
+    ) {
       setOutput("Please provide valid side lengths");
     } else {
       let s = (a + b + c) / 2;
