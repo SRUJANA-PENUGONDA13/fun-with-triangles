@@ -22,10 +22,16 @@ const Area = () => {
       Number.isNaN(c)
     ) {
       setOutput("Please provide valid side lengths");
+    } else if (!(a + b > c && b + c > a && c + a > b)) {
+      setOutput(
+        "Please provide valid side lengths which satisfies the condition a+b > c , a+c > b and b+c > a "
+      );
     } else {
-      let s = (a + b + c) / 2;
-      let area = Math.sqrt(s * (s - a) * (s - b) * (s - c));
-      setOutput("Area of a triangle is: " + area.toFixed(2) + " units");
+      var s = parseFloat((a + b + c) / 2);
+      var area = Math.sqrt(s * (s - a) * (s - b) * (s - c));
+      setOutput(
+        "Area of a triangle using Heron's Formula is: " + area + " units"
+      );
     }
   };
   return (
@@ -34,7 +40,7 @@ const Area = () => {
       <main className="triangle-test">
         <h1>Calculate Area of a triangle</h1>
         <label className="input-label" for="side1">
-          <p>Enter first side of a triangle</p>
+          <p>Enter first side of a triangle (a)</p>
         </label>
         <input
           type="number"
@@ -43,7 +49,7 @@ const Area = () => {
           onChange={(event) => setSide1(event.target.value)}
         ></input>
         <label className="input-label" for="side2">
-          <p>Enter second side of a triangle</p>
+          <p>Enter second side of a triangle (b)</p>
         </label>
         <input
           type="number"
@@ -52,7 +58,7 @@ const Area = () => {
           onChange={(event) => setSide2(event.target.value)}
         ></input>
         <label className="input-label" for="side3">
-          <p>Enter third side of a triangle</p>
+          <p>Enter third side of a triangle (c)</p>
         </label>
         <input
           type="number"
